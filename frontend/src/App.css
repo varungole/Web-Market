@@ -1,0 +1,215 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.navbar .nav-links li {
+    padding: 0 15px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #007bff;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Burger Icon */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
+/* Animation for burger icon when active */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* HomePage Styles */
+.homePage {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.heroSection {
+    background-color: #007bff;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.heroSection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.heroSection p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.featuresSection {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px; /* Adjust gap for spacing between feature cards */
+}
+
+.feature {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Adjust width for 3 features per row, accounting for gap */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
+}
+
+.feature h2 {
+    color: #007bff; /* Theme color for headings */
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .featuresSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%; /* Adjust for mobile layout */
+        margin-bottom: 20px; /* Adds space between cards on smaller screens */
+    }
+}
+
+/* Footer Styles */
+.homeFooter {
+    background-color: #343a40; /* Dark background for contrast */
+    color: #ffffff; /* White text color for readability */
+    text-align: center;
+    padding: 20px 10px; /* Adequate padding for spacing */
+    margin-top: 30px; /* Ensures there's space between the footer and content above it */
+    font-size: 0.9rem; /* Adjust the font size as necessary */
+    border-top: 3px solid #007bff; /* Optional: adds a thematic color stripe at the top */
+    margin-top: 24rem
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .homeFooter {
+        padding: 15px 5px; /* Slightly reduce padding on smaller screens */
+    }
+}
+
+/* Products Container Styles */
+.products-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Evenly space out products with center alignment */
+    gap: 20px; /* Space between each product */
+    padding: 20px; /* Padding around the entire products container */
+}
+
+
