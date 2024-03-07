@@ -22,7 +22,7 @@ func main() {
 
 	// Initialize the MySQL driver
 	var err error
-	db, err = sql.Open("mysql", ":@A@tcp(localhost:3306)/webMarket")
+	db, err = sql.Open("mysql", ":@tcp(localhost:3306)/webMarket")
 	if err != nil {
 		panic(err.Error())
 	}
